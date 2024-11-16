@@ -1,0 +1,48 @@
+{
+	"version": "0.2.2",
+	"includes": [
+		"C:\\Totvs\\TOTVS_P1212310\\Protheus\\include",
+		"C:\\Totvs\\TOTVS_P1212310\\Protheus\\include",
+		"C:\\Totvs\\TOTVS_P1212310\\Protheus\\include"
+	],
+	"permissions": {
+		"authorizationtoken": ""
+	},
+	"connectedServer": {},
+	"configurations": [
+		{
+			"id": "nm7r7afx2am2wivwj365j4a0wl6k",
+			"type": "totvs_server_protheus",
+			"name": "TEST",
+			"port": 1291,
+			"address": "localhost",
+			"buildVersion": "7.00.210324P",
+			"secure": false,
+			"includes": [
+				"C:\\Totvs\\TOTVS_P1212310\\Protheus\\include"
+			],
+			"environments": [
+				"TOTVS_P1212310_REST"
+			],
+			"username": "admin",
+			"environment": "TOTVS_P1212310_REST",
+			"token": "djM6bm03cjdhZngyYW0yd2l2d2ozNjVqNGEwd2w2azoxOmxvY2FsaG9zdDoxMjkxOjA6Ny4wMC4yMTAzMjRQOjM=:djE6VE9UVlNfUDEyMTIzMTBfUkVTVDphZG1pbjp6Z1YwS3JxQUxWblBoeDdrSU0xQXRaRXlhaVpwOTlUUVhyZ3QxcGJZRlNJPQ==|djI6MTczMTUzNTUzNjowOjE6MQ==.HSPWDL0x9WCGs3bKVgI/ppiZnLHwfsfumEp0FQE7l870Y7vSyujJJR0dDpdzPEG8z+UsTFykMP0H8dV4akT744z8neeYbG0EkwdzKhXoNbe3mskUM8lsT6RsQBM/AphOVpO9XhM09olgcnEVh2RaZW7TbZsP+XSb5/YnQSzYY8sR2T+fe8/ASgdymOWukf2pKPYI0jZhkRVsa7I70LoEb148B1zj2yizAvLwEaguXSZTojji84D27LL6Tkg5j1AQiBYNcqSLGNpAo4RDoc/+fh7J4ep846w2l8CfRoYgFHU5QepuVhjLznI5KRFBT04Z1mxTAunfqHan7HiiLrQHww==",
+			"informations": {
+				"permissions": [],
+				"errorMessage": "",
+				"environmentDetectedType": "totvs_server_protheus",
+				"serverDetectedType": "totvs_server_protheus"
+			}
+		}
+	],
+	"savedTokens": [
+		[
+			"nm7r7afx2am2wivwj365j4a0wl6k:TOTVS_P1212310_REST",
+			{
+				"id": "nm7r7afx2am2wivwj365j4a0wl6k",
+				"token": "djM6bm03cjdhZngyYW0yd2l2d2ozNjVqNGEwd2w2azoxOmxvY2FsaG9zdDoxMjkxOjA6Ny4wMC4yMTAzMjRQOjM=:djE6VE9UVlNfUDEyMTIzMTBfUkVTVDphZG1pbjp6Z1YwS3JxQUxWblBoeDdrSU0xQXRaRXlhaVpwOTlUUVhyZ3QxcGJZRlNJPQ==|djI6MTczMTUzNTUzNjowOjE6MQ==.HSPWDL0x9WCGs3bKVgI/ppiZnLHwfsfumEp0FQE7l870Y7vSyujJJR0dDpdzPEG8z+UsTFykMP0H8dV4akT744z8neeYbG0EkwdzKhXoNbe3mskUM8lsT6RsQBM/AphOVpO9XhM09olgcnEVh2RaZW7TbZsP+XSb5/YnQSzYY8sR2T+fe8/ASgdymOWukf2pKPYI0jZhkRVsa7I70LoEb148B1zj2yizAvLwEaguXSZTojji84D27LL6Tkg5j1AQiBYNcqSLGNpAo4RDoc/+fh7J4ep846w2l8CfRoYgFHU5QepuVhjLznI5KRFBT04Z1mxTAunfqHan7HiiLrQHww=="
+			}
+		]
+	],
+	"lastConnectedServer": ""
+}
