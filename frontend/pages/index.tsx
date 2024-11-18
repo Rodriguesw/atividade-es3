@@ -6,6 +6,8 @@ import ClientTable from '@/components/table/ClientTable';
 import Pagination from '@/components/table/Pagination';
 import { FormData } from '@/validations';
 
+import * as S from './styles'
+
 const ITEMS_PER_PAGE = 10;
 
 export default function Home() {
@@ -22,12 +24,12 @@ export default function Home() {
 
   return (
     <div className="p-6 bg-white rounded-xl shadow-sm h-full">
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-semibold">Clientes</h1>
-        <button onClick={() => setModalOpen(true)} className="bg-blue-500 text-white px-4 py-2 rounded-md">
-          Adicionar cliente
+      <S.Container className="mb-6">
+        <h1 className="text-2xl font-semibold">Meus Clientes</h1>
+        <button onClick={() => setModalOpen(true)} className="text-white px-4 py-2 rounded-md">
+          Adicionar Cliente
         </button>
-      </div>
+      </S.Container>
 
       <AddProductModal open={isModalOpen} handleClose={() => { setModalOpen(false); setCurrentUser(null); }} user={currentUser} refresh={refreshList} />
 
@@ -39,7 +41,7 @@ export default function Home() {
         <ClientTable clients={clients?.items || []} onViewClient={(client) => { setCurrentUser(client); setModalOpen(true); }} refresh={refreshList} />
       )}
 
-      <Pagination currentPage={currentPage} totalPages={totalPages} onNext={handleNextPage} onPrevious={handlePreviousPage} />
+      {/* <Pagination currentPage={currentPage} totalPages={totalPages} onNext={handleNextPage} onPrevious={handlePreviousPage} /> */}
     </div>
   );
 }
