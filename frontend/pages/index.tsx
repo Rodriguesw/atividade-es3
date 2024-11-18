@@ -25,7 +25,7 @@ export default function Home() {
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-semibold">Clientes</h1>
         <button onClick={() => setModalOpen(true)} className="bg-blue-500 text-white px-4 py-2 rounded-md">
-          Adicionar
+          Adicionar cliente
         </button>
       </div>
 
