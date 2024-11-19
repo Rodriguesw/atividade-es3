@@ -9,4 +9,19 @@ export const H2 = styled.h2`
 
 export const Form = styled.form`
   display: flex;
+  flex-direction: column;
+
+  >div> div >div >div { 
+    >div {
+      padding: 10px;
+
+    > input {
+        padding: 0px;
+      }
+    }
+
+    > input{
+      padding: 10px;
+    }
+}
 `;

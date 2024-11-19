@@ -114,20 +114,20 @@ const AddProductModal = ({ open, handleClose, user, refresh }: AddProductModalPr
         left: '50%',
         transform: 'translate(-50%, -50%)',
         bgcolor: 'background.paper',
-        borderRadius: '24px',
-        width: '900px',
-        padding: '20px'
+        borderRadius: '14px',
+        width: '1000px',
+        padding: '10px'
       }}>
-        <S.H2 className="font-semibold mb-4">{user ? "Editar cliente" : "Cadastrar cliente"}</S.H2>
-        <S.Form onSubmit={handleSubmit((data) => onSubmit.mutate(data))} className="gap-3">
+        <S.H2 className="font-semibold">{user ? "Editar cliente" : "Cadastrar novo cliente"}</S.H2>
+        <S.Form onSubmit={handleSubmit((data) => onSubmit.mutate(data))} className="gap-1">
           <div className="flex flex-col gap-2">
-            <InputField name="nome" label="Nome" register={register} errors={errors} disabled={false} />
-            <InputField name="codigo" label="Código" register={register} errors={errors} disabled={false} />
-            <InputField name="loja" label="Loja" register={register} errors={errors} disabled={false} />
+            <InputField name="nome" label="Nome da Loja" register={register} errors={errors} disabled={false} />
+            <InputField name="codigo" label="Cod." register={register} errors={errors} disabled={false} />
+            <InputField name="loja" label="Num. Loja" register={register} errors={errors} disabled={false} />
           </div>
 
           {/* Adicione os outros campos de forma similar */}
-          <div className="flex flex-col gap-2">
+          <div className="flex gap-1">
             <SelectField
               name="pessoa"
               label="Pessoa"
@@ -149,8 +149,8 @@ const AddProductModal = ({ open, handleClose, user, refresh }: AddProductModalPr
               disabled={false}
             />
           </div>
-          <div className="flex flex-col gap-2">
-            <InputField name="contato" label="Contato" register={register} errors={errors} disabled={false} />
+          <div className="flex gap-1">
+            <InputField name="contato" label="Nome" register={register} errors={errors} disabled={false} />
             <MaskedInputField
               name="ddd"
               label="DDD"
@@ -169,7 +169,7 @@ const AddProductModal = ({ open, handleClose, user, refresh }: AddProductModalPr
             />
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div className="flex gap-1">
             <SelectField
               name="status"
               label="Status"
@@ -199,12 +199,12 @@ const AddProductModal = ({ open, handleClose, user, refresh }: AddProductModalPr
             />
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div className="flex gap-1">
             <InputField name="email" label="E-mail" register={register} errors={errors} disabled={false} />
-            <InputField name="pais" label="País" hasLink register={register} errors={errors} disabled={false} />
+            <InputField name="pais" label="Cod .País" register={register} errors={errors} disabled={false} />
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div className="flex gap-1">
             <MaskedInputField
               name="cep"
               label="CEP"
@@ -216,7 +216,7 @@ const AddProductModal = ({ open, handleClose, user, refresh }: AddProductModalPr
 
           {showAddressFields && (
             <Fade in={showAddressFields} timeout={500}>
-              <div className="flex gap-3 flex-col">
+              <div className="flex gap-3 ">
                 <div className="flex gap-3">
                   <InputField name="endereco" register={register} errors={errors} disabled={false} />
                   <InputField name="bairro" register={register} errors={errors} disabled={false} />
@@ -243,7 +243,7 @@ const AddProductModal = ({ open, handleClose, user, refresh }: AddProductModalPr
           )}
 
           <Button type="submit" variant="contained" disabled={!isDirty || !isValid}>
-            {user ? "Editar Cliente" : "Cadastrar Cliente"}
+            {user ? "Editar Cliente" : "Cadastrar novo cliente"}
           </Button>
         </S.Form>
       </Box>

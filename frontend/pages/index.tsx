@@ -28,7 +28,7 @@ export default function Home() {
         <img src="/sign-up.png"/>
 
         <S.ContainerHead>
-          <h1 className="text-2xl font-semibold">Meus Clientes</h1>
+          <h1 className="text-2xl font-semibold">Meus clientes cadastrados</h1>
 
           <button onClick={() => setModalOpen(true)} className="text-white px-4 py-2 rounded-md">
             Adicionar novo cliente
