@@ -1,13 +1,33 @@
-# Documentação do front em Next.Js - StyledComponents - Chakra-ui
+# 📋 Documentação do Frontend e API - Next.js, Styled Components e Chakra UI
 
-## Rodando localmente
+## 🛠️ Tecnologias Utilizadas
+- **Next.js**
+- **Styled Components**
+- **Chakra UI**
+- **ESLint**
 
-Utilize o comando `npm install && npm run dev` após a clonagem
 
-    Etapas:
-    git clone https://github.com/Rodriguesw/atividade-es3
-    npm install
-    npm run dev
+---
+
+## 🚀 Iniciando o Projeto Localmente
+
+### Pré-requisitos
+Certifique-se de ter o **Node.js** instalado em sua máquina.
+
+### Passos para Clonar e Rodar o Projeto
+
+``bash
+# Clone o repositório
+git clone https://github.com/Rodriguesw/atividade-es3
+
+# Acesse o diretório do projeto
+cd atividade-es3
+
+# Instale as dependências
+npm install
+
+# Inicie o servidor de desenvolvimento
+npm run dev
 
 # Documentação da API Protheus
 
@@ -111,33 +131,3 @@ Esta API fornece endpoints para gerenciar clientes no sistema Protheus. A classe
 ## Visão Geral
 
 Esta API fornece endpoints para gerenciar clientes no sistema Protheus. A classe `TAB_CLIENTES` implementa métodos para listar, recuperar, atualizar, deletar e incluir registros de clientes.
-
-## Tratamento de Erros
-
-Todos os métodos devem capturar exceções e retornar mensagens de erro apropriadas em formato JSON. As respostas de erro padrão incluem:
-
-- **Código de Status:** 500
-- **Corpo:**
-  ```json
-  {
-    "error": "Descrição do erro aqui"
-  }
-  ```
-  <br>
- <hr>
-<div align="center">
-    <picture>
-      <img alt="Diagrama 1" src="/backend/assets/caso_e_uso.svg" height="128">
-    </picture>
-</div>
-
-
- <br>
- <hr>
-
-
-<div align="center">
-    <picture>
-      <img alt="Diagrama 2" src="/backend/assets/diagrama_de_classes.svg" >
-    </picture>
-</div>
