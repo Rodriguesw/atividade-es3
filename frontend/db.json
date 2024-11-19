@@ -3,7 +3,7 @@
     {
       "codigo": "001",
       "loja": "L01",
-      "nome": "João Silva",
+      "nome": "Matheus Teste",
       "pessoa": "F",
       "cep": "12345678",
       "estado": "SP",
@@ -12,9 +12,9 @@
       "tipo": "F",
       "ddd": "11",
       "telefone": "987654321",
-      "email": "joao@exemplo.com",
+      "email": "Matheusteste@exemplo.com",
       "pais": "Brasil",
-      "contato": "João"
+      "contato": "Matheus"
     }
   ]
 }

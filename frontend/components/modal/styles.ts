@@ -23,5 +23,9 @@ export const Form = styled.form`
     > input{
       padding: 10px;
     }
-}
+  }
+
+  >button:last-child{
+      width: 15rem;
+  }
 `;
