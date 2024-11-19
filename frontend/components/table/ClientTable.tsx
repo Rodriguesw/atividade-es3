@@ -5,6 +5,8 @@ import React from 'react';
 import { useMutation } from 'react-query';
 import { toast } from 'react-toastify';
 
+import * as S from './stylesClientTable'
+
 interface ClientTableProps {
   clients: FormData[];
   onViewClient: (client: FormData) => void;
@@ -51,12 +53,12 @@ const ClientTable: React.FC<ClientTableProps> = ({ clients, onViewClient, refres
   });
 
   return (
-    <div className="bg-white shadow-md rounded-lg overflow-x-auto max-w-full">
+    <S.Container className="shadow-md overflow-x-auto max-w-full">
       <table className="min-w-full table-auto">
         <thead className="bg-gray-100">
           <tr>
-            {['Código', 'Bairro', 'CEP', 'Cidade', 'CNPJ', 'Contato', 'DDD', 'E-mail', 'Endereço', 'Estado', 'Loja', 'Nome', 'País', 'Pessoa', 'Telefone', 'Tipo', 'Status', 'View', 'Delete'].map((header) => (
-              <th key={header} className="py-2 px-4 text-left">{header}</th>
+            {['Cod.', 'Bairro', 'CEP', 'Cidade', 'CNPJ', 'Contato', 'DDD', 'E-mail', 'Endereço', 'Estado', 'Loja', 'Nome', 'País', 'Pessoa', 'Telefone', 'Tipo', 'Status', 'View', 'Delete'].map((header) => (
+              <S.Th key={header}>{header}</S.Th>
             ))}
           </tr>
         </thead>
@@ -64,23 +66,23 @@ const ClientTable: React.FC<ClientTableProps> = ({ clients, onViewClient, refres
           {clients.length > 0 ? (
             clients.map((client) => (
               <tr key={client.codigo} className="border-b">
-                <td className="py-3 px-4">{client.codigo}</td>
-                <td className="py-3 px-4">{client.bairro}</td>
-                <td className="py-3 px-4">{client.cep}</td>
-                <td className="py-3 px-4">{client.cidade}</td>
-                <td className="py-3 px-4">{client.cnpj}</td>
-                <td className="py-3 px-4">{client.contato}</td>
-                <td className="py-3 px-4">{client.ddd}</td>
-                <td className="py-3 px-4">{client.email}</td>
-                <td className="py-3 px-4">{client.endereco}</td>
-                <td className="py-3 px-4">{client.estado}</td>
-                <td className="py-3 px-4">{client.loja}</td>
-                <td className="py-3 px-4">{client.nome}</td>
-                <td className="py-3 px-4">{client.pais}</td>
-                <td className="py-3 px-4">{client.pessoa}</td>
-                <td className="py-3 px-4">{client.telefone}</td>
-                <td className="py-3 px-4">{client.tipo}</td>
-                <td className="py-3 px-4">
+                <td className="py-2 px-3">{client.codigo}</td>
+                <td className="py-2 px-3">{client.bairro}</td>
+                <td className="py-2 px-3">{client.cep}</td>
+                <td className="py-2 px-3">{client.cidade}</td>
+                <td className="py-2 px-3">{client.cnpj}</td>
+                <td className="py-2 px-3">{client.contato}</td>
+                <td className="py-2 px-3">{client.ddd}</td>
+                <td className="py-2 px-3">{client.email}</td>
+                <td className="py-2 px-3">{client.endereco}</td>
+                <td className="py-2 px-3">{client.estado}</td>
+                <td className="py-2 px-3">{client.loja}</td>
+                <td className="py-2 px-3">{client.nome}</td>
+                <td className="py-2 px-3">{client.pais}</td>
+                <td className="py-2 px-3">{client.pessoa}</td>
+                <td className="py-2 px-3">{client.telefone}</td>
+                <td className="py-2 px-3">{client.tipo}</td>
+                <td className="py-2 px-3">
                   <span className={`px-8 py-1 rounded-full text-xs font-medium ${getStatusStyle(client.status)}`}>
                     {formatStatusName(client.status)}
                   </span>
@@ -98,13 +100,13 @@ const ClientTable: React.FC<ClientTableProps> = ({ clients, onViewClient, refres
               </tr>
             ))
           ) : (
-            <tr>
-              <td colSpan={17} className="py-3 px-4 text-center">Nenhum cliente encontrado.</td>
-            </tr>
+            <S.Tr>
+              <td colSpan={17} className="py-3 px-4 text-center">Nenhum cliente registrado no sistema.</td>
+            </S.Tr>
           )}
         </tbody>
       </table>
-    </div>
+    </S.Container>
   )
 }
 

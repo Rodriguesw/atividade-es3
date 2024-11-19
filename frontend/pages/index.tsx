@@ -25,18 +25,23 @@ export default function Home() {
   return (
     <div className="p-6 bg-white rounded-xl shadow-sm h-full">
       <S.Container className="mb-6">
-        <h1 className="text-2xl font-semibold">Meus Clientes</h1>
-        <button onClick={() => setModalOpen(true)} className="text-white px-4 py-2 rounded-md">
-          Adicionar Cliente
-        </button>
+        <img src="/sign-up.png"/>
+
+        <S.ContainerHead>
+          <h1 className="text-2xl font-semibold">Meus Clientes</h1>
+
+          <button onClick={() => setModalOpen(true)} className="text-white px-4 py-2 rounded-md">
+            Adicionar novo cliente
+          </button>
+        </S.ContainerHead>
       </S.Container>
 
       <AddProductModal open={isModalOpen} handleClose={() => { setModalOpen(false); setCurrentUser(null); }} user={currentUser} refresh={refreshList} />
 
       {isLoading ? (
-        <div className='flex items-center justify-center h-40'>
+        <S.Loading className='flex items-center justify-center'>
           <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-500"></div>
-        </div>
+        </S.Loading>
       ) : (
         <ClientTable clients={clients?.items || []} onViewClient={(client) => { setCurrentUser(client); setModalOpen(true); }} refresh={refreshList} />
       )}

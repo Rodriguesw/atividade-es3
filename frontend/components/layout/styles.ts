@@ -11,4 +11,6 @@ export const Container = styled.div`
 
 export const ContainerContent = styled.div`
     height: 50rem !important;    
+
+    border-radius: 1.5rem;
 `;

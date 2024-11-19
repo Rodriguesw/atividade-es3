@@ -12,6 +12,8 @@ import InputField from '@/components/inputs/InputField';
 import SelectField from '@/components/inputs/SelectField';
 import MaskedInputField from '@/components/inputs/MaskedInputField';
 
+import * as S from './styles'
+
 interface AddProductModalProps {
   open: boolean;
   handleClose: () => void;
@@ -112,11 +114,11 @@ const AddProductModal = ({ open, handleClose, user, refresh }: AddProductModalPr
         left: '50%',
         transform: 'translate(-50%, -50%)',
         bgcolor: 'background.paper',
-        borderRadius: '8px',
+        borderRadius: '24px',
         width: '700px',
         padding: '20px'
       }}>
-        <h2 className="text-xl font-semibold mb-4">{user ? "Editar Cliente" : "Cadastrar Novo Cliente"}</h2>
+        <S.H2 className="font-semibold mb-4">{user ? "Editar cliente" : "Cadastrar cliente"}</S.H2>
         <form onSubmit={handleSubmit((data) => onSubmit.mutate(data))} className="flex flex-col gap-3">
           <div className="flex gap-3">
             <InputField name="nome" label="Nome" register={register} errors={errors} disabled={false} />
