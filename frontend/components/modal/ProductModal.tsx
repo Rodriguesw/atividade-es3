@@ -115,19 +115,19 @@ const AddProductModal = ({ open, handleClose, user, refresh }: AddProductModalPr
         transform: 'translate(-50%, -50%)',
         bgcolor: 'background.paper',
         borderRadius: '24px',
-        width: '700px',
+        width: '900px',
         padding: '20px'
       }}>
         <S.H2 className="font-semibold mb-4">{user ? "Editar cliente" : "Cadastrar cliente"}</S.H2>
-        <form onSubmit={handleSubmit((data) => onSubmit.mutate(data))} className="flex flex-col gap-3">
-          <div className="flex gap-3">
+        <S.Form onSubmit={handleSubmit((data) => onSubmit.mutate(data))} className="gap-3">
+          <div className="flex flex-col gap-2">
             <InputField name="nome" label="Nome" register={register} errors={errors} disabled={false} />
             <InputField name="codigo" label="Código" register={register} errors={errors} disabled={false} />
             <InputField name="loja" label="Loja" register={register} errors={errors} disabled={false} />
           </div>
 
           {/* Adicione os outros campos de forma similar */}
-          <div className="flex gap-3">
+          <div className="flex flex-col gap-2">
             <SelectField
               name="pessoa"
               label="Pessoa"
@@ -149,7 +149,7 @@ const AddProductModal = ({ open, handleClose, user, refresh }: AddProductModalPr
               disabled={false}
             />
           </div>
-          <div className="flex gap-3">
+          <div className="flex flex-col gap-2">
             <InputField name="contato" label="Contato" register={register} errors={errors} disabled={false} />
             <MaskedInputField
               name="ddd"
@@ -169,7 +169,7 @@ const AddProductModal = ({ open, handleClose, user, refresh }: AddProductModalPr
             />
           </div>
 
-          <div className="flex gap-3">
+          <div className="flex flex-col gap-2">
             <SelectField
               name="status"
               label="Status"
@@ -199,12 +199,12 @@ const AddProductModal = ({ open, handleClose, user, refresh }: AddProductModalPr
             />
           </div>
 
-          <div className="flex gap-3">
+          <div className="flex flex-col gap-2">
             <InputField name="email" label="E-mail" register={register} errors={errors} disabled={false} />
             <InputField name="pais" label="País" hasLink register={register} errors={errors} disabled={false} />
           </div>
 
-          <div className="flex gap-3">
+          <div className="flex flex-col gap-2">
             <MaskedInputField
               name="cep"
               label="CEP"
@@ -245,7 +245,7 @@ const AddProductModal = ({ open, handleClose, user, refresh }: AddProductModalPr
           <Button type="submit" variant="contained" disabled={!isDirty || !isValid}>
             {user ? "Editar Cliente" : "Cadastrar Cliente"}
           </Button>
-        </form>
+        </S.Form>
       </Box>
     </Modal>
   );

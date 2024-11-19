@@ -1,24 +1,15 @@
-# Documentação do frontend em Next.Js
+# Documentação do front em Next.Js - StyledComponents - Chakra-ui
 
-## About
+## Rodando localmente
 
-Next.js is a framework that makes it easy to create 'universal' React apps - React apps that do both client and server side rendering.
+Utilize o comando `npm install && npm run dev` após a clonagem
 
-With Next.js, React pages are automatically rendered on both client and server side, without the hassle of setting up dependancies like webpack or babel and with automatic routing and without the constraints of projects like Create React App.
-
-This is a starter project that provides an example of how to use Next.js with Express, SASS/SCSS, Bootstrap, Reactstrap (Boostrap 4 for React), the Ionicons icon set, examples of how to include data from remote REST APIs and incorporate an authentication system that supports both oAuth and Email using Passport (a popular authentication framework for Node.js).
-
-This project exists to make it easier to get started a creating production app in React. You are invited to use it as a reference or to copy it and use it as a base for your own projects. Contributions to improve this project are welcome.
-
-## Running locally in development mode
-
-To get started, just clone the repository and run `npm install && npm run dev`:
-
-    git clone https://github.com/joaobatista235/ADVLP.git
+    Etapas:
+    git clone https://github.com/Rodriguesw/atividade-es3
     npm install
     npm run dev
 
-# Documentação da API Protheus Clientes
+# Documentação da API Protheus
 
 ## Visão Geral
 
@@ -97,19 +88,19 @@ Esta API fornece endpoints para gerenciar clientes no sistema Protheus. A classe
    {
     "codigo": "B1",
     "loja": "01",
-    "nome": "JOAO",
+    "nome": "MATHEUS",
     "pessoa": "F",
-    "endereco": "Rua das Flores, 123",
+    "endereco": "Rua Francisco correa da silva, 505",
     "cep": "12345-678",
-    "bairro": "Centro",
+    "bairro": "Vila Rubens",
     "cidade": "ITAPETININGA",
     "estado": "SP",
     "cnpj": "37872595893",
     "status": "1",
     "tipo": "F",
-    "email": "joaobatista@gmail.com",
+    "email": "matheushr39@gmail.com",
     "ddd": "15",
-    "telefone": "998394854",
+    "telefone": "991601215",
     "pais": "023",
     "contato": "contato"
    }
